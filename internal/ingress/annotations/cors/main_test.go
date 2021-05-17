@@ -72,7 +72,7 @@ func TestIngressCorsConfigValid(t *testing.T) {
 	data[parser.GetAnnotationWithPrefix("cors-allow-headers")] = "DNT,X-CustomHeader, Keep-Alive,User-Agent"
 	data[parser.GetAnnotationWithPrefix("cors-allow-credentials")] = "false"
 	data[parser.GetAnnotationWithPrefix("cors-allow-methods")] = "GET, PATCH"
-	data[parser.GetAnnotationWithPrefix("cors-allow-origin")] = "https://origin123.test.com:4443"
+	data[parser.GetAnnotationWithPrefix("cors-allow-origin")] = "https://*.origin123.test.com:4443"
 	data[parser.GetAnnotationWithPrefix("cors-expose-headers")] = "*, X-CustomResponseHeader"
 	data[parser.GetAnnotationWithPrefix("cors-max-age")] = "600"
 	ing.SetAnnotations(data)
